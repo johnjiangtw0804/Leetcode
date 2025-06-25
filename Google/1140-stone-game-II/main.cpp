@@ -10,6 +10,7 @@ public:
         {
             suffix[i] += suffix[i + 1] + piles[i];
         }
+        // memo[i][M] = 從 index i 開始，當前的最大可取數為 M 時，Alice 在此狀態下能拿到的 **最多總分**
         vector<vector<int>> dp(n + 1, vector<int>(n + 1, 0));
         function<int(int, int)> helper = [&](int i, int M)
         {
