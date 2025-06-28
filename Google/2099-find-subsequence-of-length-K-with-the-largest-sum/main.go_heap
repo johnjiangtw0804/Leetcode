@@ -1,0 +1,53 @@
+package main
+
+import "container/heap"
+
+type maxHeap []int
+
+func (m maxHeap) Len() int { return len(m) }
+
+func (m maxHeap) Less(i int, j int) bool { return m[i] > m[j] }
+
+func (h *maxHeap) Swap(i, j int) { (*h)[i], (*h)[j] = (*h)[j], (*h)[i] }
+
+func (h *maxHeap) Push(a any) {
+	*h = append(*h, a.(int))
+}
+
+func (h *maxHeap) Pop() any {
+	old := *h
+	n := len(old)
+	popped := old[n-1]
+	*h = old[0 : n-1]
+
+	return popped
+}
+
+func maxSubsequence(nums []int, k int) []int {
+	pq := maxHeap{}
+	heap.Init(&pq)
+
+	for _, val := range nums {
+		heap.Push(&pq, val)
+	}
+
+	temp := k
+	mem := make(map[int]int)
+	for temp > 0 {
+		mem[heap.Pop(&pq).(int)] += 1
+		temp--
+	}
+
+	res := make([]int, 0)
+	for _, num := range nums {
+		if len(res) == k {
+			break
+		}
+		if mem[num] > 0 {
+			mem[num]--
+			res = append(res, num)
+		}
+	}
+
+	return res
+}
