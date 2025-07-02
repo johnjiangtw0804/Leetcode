@@ -4,7 +4,7 @@
 using namespace std;
 class RandomizedSet {
 private:
-    unordered_map<int, int > dataStore;
+    unordered_map<int, int> dataStore;
     vector<int> keys;
 
 public:
@@ -55,4 +55,8 @@ int main() {
     cout << ((myRandomSet.remove(5) == false)? "Correct" : "false")<< endl;
     cout << ((myRandomSet.remove(3) == true) ? "Correct" : "false") << endl;
     cout << ((myRandomSet.insert(3) == true)? "Correct" : "false") << endl;
+
+    cout << ((myRandomSet.insert(0) == true)? "Correct" : "false") << endl;
+    cout << ((myRandomSet.remove(0) == true)? "Correct" : "false") << endl;
+    cout << ((myRandomSet.insert(0) == true)? "Correct" : "false") << endl;
 }
