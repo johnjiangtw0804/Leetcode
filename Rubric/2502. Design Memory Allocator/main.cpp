@@ -31,7 +31,6 @@ public:
         //      2 最開頭
         //      3 gap 得部分
         //      3 如果是尾部
-
         if (dataStore.size() == 0) {
             if (size > capacity) {
                 return -1;
@@ -87,6 +86,14 @@ public:
     }
 };
 
+
+int main () {
+    Allocator *obj = new Allocator(3);
+    int param_1 = obj->allocate(1, 1);
+    cout << param_1 << endl;
+    int param_2 = obj->freeMemory(1);
+    return 0;
+}
 /**
  * Your Allocator object will be instantiated and called as such:
  * Allocator* obj = new Allocator(n);
