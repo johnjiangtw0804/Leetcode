@@ -31,16 +31,23 @@ public:
             }
         }
         swap(nums[stored_left], nums[right]);
-        if (k <= stored_left)
+        if (stored_left == k)
+        {
+            return nums[stored_left];
+        }
+        if (k < stored_left)
         {
             while (left < stored_left && nums[stored_left] == nums[stored_left - 1])
             {
-                // 以免減過頭
                 if (stored_left == k)
                     return pivot;
                 stored_left--;
             }
-            return quickSelect(nums, left, stored_left, k);
+            if (left == stored_left)
+            {
+                return nums[left];
+            }
+            return quickSelect(nums, left, stored_left - 1, k);
         }
         return quickSelect(nums, stored_left + 1, right, k);
     }
