@@ -12,25 +12,25 @@
 
 ## 📅 **Day 2 — Hash Map & Grouping**
 
-- [ ]  49. Group Anagrams *(HashMap + Sorting)*
-- [ ]  347. Top K Frequent Elements *(Heap + HashMap)*
-- [ ]  424. Longest Repeating Character Replacement *(Sliding Window)*
+- [X]  49. Group Anagrams *(HashMap + Sorting)*
+- [X]  347. Top K Frequent Elements *(Heap + HashMap)*
+- [X]  424. Longest Repeating Character Replacement *(Sliding Window)*
 
 ---
 
 ## 📅 **Day 3 — 堆與貪心**
 
-- [ ]  253. Meeting Rooms II *(Min Heap)*
-- [ ]  215. Kth Largest Element in an Array *(QuickSelect or Heap)*
-- [ ]  56. Merge Intervals *(Interval Sorting)*
+- [x]  253. Meeting Rooms II *(Min Heap)*
+- [X]  215. Kth Largest Element in an Array *(QuickSelect or Heap)*
+- [X]  56. Merge Intervals *(Interval Sorting)*
 
 ---
 
 ## 📅 **Day 4 — 經典字串處理**
 
-- [ ]  76. Minimum Window Substring *(Hard Sliding Window)*
-- [ ]  20. Valid Parentheses *(Stack)*
-- [ ]  151. Reverse Words in a String *(String Manipulation)*
+- [X]  76. Minimum Window Substring *(Hard Sliding Window)*
+- [X]  20. Valid Parentheses *(Stack)*
+- [X]  151. Reverse Words in a String *(String Manipulation)*
 
 ---
 
