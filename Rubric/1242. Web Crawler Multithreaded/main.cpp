@@ -3,6 +3,8 @@
 #include <list>
 #include <unordered_set>
 #include <thread>
+#include <functional>
+#include <mutex>
 
 using namespace std;
 class HtmlParser
