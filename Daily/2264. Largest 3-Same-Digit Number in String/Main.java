@@ -1,5 +1,3 @@
-import java.util.*;
-
 class Solution {
     public String largestGoodInteger(String num) {
         char[] s = num.toCharArray();
